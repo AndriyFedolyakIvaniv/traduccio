@@ -58,6 +58,30 @@ namespace Traduccio
             this.Hide();
 
         }
+        private void ajudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Help.ShowHelp(this, "help\\ajuda.html");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No s'ha pogut obrir l'ajuda: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void faqToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Help.ShowHelp(this, "help\\faq.html");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No s'ha pogut obrir el FAQ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
 
         private void label1_Click(object sender, EventArgs e)
@@ -81,6 +105,11 @@ namespace Traduccio
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

@@ -44,6 +44,8 @@
             button2 = new Button();
             label9 = new Label();
             label10 = new Label();
+            helpProvider1 = new HelpProvider();
+            helpProvider2 = new HelpProvider();
             SuspendLayout();
             // 
             // comboBox1
@@ -131,6 +133,14 @@
             resources.ApplyResources(label10, "label10");
             label10.Name = "label10";
             // 
+            // helpProvider1
+            // 
+            resources.ApplyResources(helpProvider1, "helpProvider1");
+            // 
+            // helpProvider2
+            // 
+            resources.ApplyResources(helpProvider2, "helpProvider2");
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -151,6 +161,9 @@
             Controls.Add(label1);
             Controls.Add(comboBox1);
             Name = "Form1";
+            helpProvider1.SetShowHelp(this, (bool)resources.GetObject("$this.ShowHelp"));
+            helpProvider2.SetShowHelp(this, (bool)resources.GetObject("$this.ShowHelp1"));
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -172,5 +185,7 @@
         private Button button2;
         private Label label9;
         private Label label10;
+        private HelpProvider helpProvider1;
+        private HelpProvider helpProvider2;
     }
 }
